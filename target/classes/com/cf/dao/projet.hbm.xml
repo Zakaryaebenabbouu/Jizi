@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.cf.entity.Projet" table="PROJET">
+     
+      <id name="idProjet" type="int" column="idProjet">
+         <generator class="native"/>
+      </id>
+      <property name="label" column="label" type="string"/>
+      <property name="description" column="description" type="string"/>
+      <property name="type" column="type" type="string"/>
+      <property name="attachement" column="attachement" type="string"/>    
+      <property name="image" column="image" type="string"/>      
+      <property name="budjet" column="budjet" type="double"/>
+      <property name="dateCreation" column="dateCreation" type="string"/>
+      <property name="region" column="region" type="string"/>
+      <property name="aprouver" column="aprouver" type="boolean"/>
+   </class>
+</hibernate-mapping>

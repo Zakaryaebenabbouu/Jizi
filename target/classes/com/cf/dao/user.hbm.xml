@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="com.cf.entity.User" table="User">
+      <meta attribute="class-description">
+         This class contains the Consomables details. 
+      </meta>
+      <id name="idUser" type="int" column="idUser">
+         <generator class="native"/>
+      </id>
+      <property name="firstName" column="firstName" type="string"/>
+      <property name="lastName" column="lastName" type="string"/>
+      <property name="email" column="email" type="string"/>
+      <property name="userName" column="userName" type="string"/>
+      <property name="password" column="password" type="string"/>
+      <property name="role" column="role" type="string"/>
+      <property name="image" column="image" type="string"/>
+            
+     <set name="payment" table="INVESTISSEMENT" cascade="all">     
+      <key>
+            <column name="idUser" not-null="true" />
+       </key>
+      <one-to-many entity-name="payment"/>
+      </set>
+      
+      <set name = "projets" cascade="all">
+         <key column = "idUser"/>
+         <one-to-many class="com.cf.entity.Projet"/>
+      </set>
+     
+   </class>
+</hibernate-mapping>
