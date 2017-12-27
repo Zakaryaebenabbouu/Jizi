@@ -28,7 +28,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'></link>
 	
 	<!-- Custom styles for this template -->
-	<link rel="stylesheet" href="css/style.css"></link>
+	<link rel="stylesheet" href="css/style.min.css"></link>
 </h:head>
 
 <h:body>
@@ -56,65 +56,66 @@
     </nav>
 
     <!-- Login forms -->
-	<section id="formes">
-    	<div class="form">
-	        <ul class="tab-group">
-	            <li class="tab active"><a href="#login">Connexion</a></li>
-	            <li class="tab"><a href="#signup">Inscription</a></li>
-	        </ul>
-	        <div class="tab-content">
-				<div id="login">   
-				   <h1>Connectez-vous</h1>
-					<h:form>
-						<div class="field-wrap">
-						    <label>Utilisateur<span class="req">*</span></label>
-						    <h:inputText id="text1" type="text" required="true" value="#{authentification.text1}"/>
-						</div>
-						<div class="field-wrap">
-						      <label>Mot de passe<span class="req">*</span></label>
-						      <h:inputSecret id="text2" required="true" value="#{authentification.text2}"/>
-						</div>
-					   <p class="forgot"><a href="#">Mot de passe oublié?</a></p>
-					   <h:commandButton class="button button-block" value="connexion" action="#{authentification.save}"/>
-					</h:form> 
-				</div><!-- login --> 
-				<div id="signup">   
-	                <h1>S'inscrire gratuitement</h1>
-	                <h:form>
-						<div class="top-row">
-							<div class="field-wrap">
-								<label>firstName<span class="req">*</span></label>
-								<h:inputText id="firstName" type="text" value="#{inscription.firstName}"/>
-							</div>
-							<div class="field-wrap">
-							    <label>lastName<span class="req">*</span></label>
-							    <h:inputText id="lastName" type="text" value="#{inscription.lastName}"/>
-							</div>                 
-						</div>
-						<div class="field-wrap">
-						    <label>L'adresse e-mail<span class="req">*</span></label>
-						    <h:inputText id="email" type="text" value="#{inscription.email}"/>
-						</div>
-						<div class="field-wrap">
-						    <label>userName<span class="req">*</span></label>
-							<h:inputText id="userName" type="text" value="#{inscription.userName}"/>
-						</div>
-						<div class="field-wrap">
-						    <label>password<span class="req">*</span></label>
-						    <h:inputText id="password" type="text" value="#{inscription.password}"/>
-						</div>
-						<h:commandButton class="button button-block" value="Valider" action="#{inscription.save}"/>
-	                </h:form>
-	            </div><!-- signup --> 
-        	</div><!-- tab-content -->     
-  		</div> <!-- /form -->
-	</section>
+  	<section id="formes">
+      	<div class="form">
+  	        <ul class="tab-group">
+  	            <li class="tab active"><a href="#login">Connexion</a></li>
+  	            <li class="tab"><a href="#signup">Inscription</a></li>
+  	        </ul>
+  	        <div class="tab-content">
+  				<div id="login">   
+  				   <h1>Connectez-vous</h1>
+  					<h:form>
+  						<div class="field-wrap">
+  						    <label>Utilisateur<span class="req">*</span></label>
+  						    <h:inputText id="text1" type="text" required="true" value="#{authentification.text1}"/>
+  						</div>
+  						<div class="field-wrap">
+  						      <label>Mot de passe<span class="req">*</span></label>
+  						      <h:inputSecret id="text2" required="true" value="#{authentification.text2}"/>
+  						</div>
+  					   <p class="forgot"><a href="#">Mot de passe oublié?</a></p>
+  					   <h:commandButton class="button button-block" value="connexion" action="#{authentification.save}"/>
+  					</h:form> 
+  				</div><!-- login --> 
+  				<div id="signup">   
+  	                <h1>S'inscrire gratuitement</h1>
+  	                <h:form>
+  						<div class="top-row">
+  							<div class="field-wrap">
+  								<label>firstName<span class="req">*</span></label>
+  								<h:inputText id="firstName" type="text" value="#{inscription.firstName}"/>
+  							</div>
+  							<div class="field-wrap">
+  							    <label>lastName<span class="req">*</span></label>
+  							    <h:inputText id="lastName" type="text" value="#{inscription.lastName}"/>
+  							</div>                 
+  						</div>
+  						<div class="field-wrap">
+  						    <label>L'adresse e-mail<span class="req">*</span></label>
+  						    <h:inputText id="email" type="text" value="#{inscription.email}"/>
+  						</div>
+  						<div class="field-wrap">
+  						    <label>userName<span class="req">*</span></label>
+  							<h:inputText id="userName" type="text" value="#{inscription.userName}"/>
+  						</div>
+  						<div class="field-wrap">
+  						    <label>password<span class="req">*</span></label>
+  						    <h:inputText id="password" type="text" value="#{inscription.password}"/>
+  						</div>
+  						<h:commandButton class="button button-block" value="Valider" action="#{inscription.save}"/>
+  	                </h:form>
+  	            </div><!-- signup --> 
+          	</div><!-- tab-content -->     
+    		</div> <!-- /form -->
+  	</section>
        
     <!-- Contact -->
     <section id="contact" style="padding-top:50px;padding-bottom:50px;font-family:Montserrat,'Helvetica Neue',Helvetica,Arial,sans-serif;">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
+          	<center><div class="nav-line"></div></center>
             <h1 class="section-heading text-uppercase" style="text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Contactez Nous</h1>
             <span style="color: #b3b3b3">Veuillez remplir le formulaire ci dessous.</span>
           </div>
@@ -172,25 +173,25 @@
                 <div class=" col-md-4 col-sm-6">
                     <h3>Liens utiles</h3><br></br>
                     <a href=""><div class="li-footer col-md-6">
-                            <i class="fa fa-angle-double-right"></i>Projets disponibles</div></a>
+                            <i class="fa fa-angle-double-right" style="margin-right: 5px"></i>Projets disponibles</div></a>
 
                     <a href="#services"><div class="li-footer col-md-6">
-                            <i class="fa fa-angle-double-right "></i>Qui sommes-nous?</div></a>
+                            <i class="fa fa-angle-double-right" style="margin-right: 5px"></i>Qui sommes-nous?</div></a>
 
                     <a href="login.xhtml"><div class="li-footer col-md-6">
-                            <i class="fa fa-angle-double-right"></i>Ajouter un projet</div></a>
+                            <i class="fa fa-angle-double-right" style="margin-right: 5px"></i>Ajouter un projet</div></a>
 
                     <a href="#about"><div class="li-footer col-md-6">
-                            <i class="fa fa-angle-double-right"></i>Comment ça marche?</div></a>
+                            <i class="fa fa-angle-double-right" style="margin-right: 5px"></i>Comment ça marche?</div></a>
 
                     <a href="#qr"><div class="li-footer col-md-6">
-                            <i class="fa fa-angle-double-right"></i>Questions fréquentes</div></a>
+                            <i class="fa fa-angle-double-right" style="margin-right: 5px"></i>Questions fréquentes</div></a>
 
                     <a href=""><div class="li-footer col-md-6">
-                            <i class="fa fa-angle-double-right"></i>Conditions d'utilisation</div></a>
+                            <i class="fa fa-angle-double-right" style="margin-right: 5px"></i>Conditions d'utilisation</div></a>
 
                     <a href="#contact"><div class="li-footer col-md-6">
-                            <i class="fa fa-angle-double-right"></i>Contactez-nous</div></a>
+                            <i class="fa fa-angle-double-right" style="margin-right: 5px"></i>Contactez-nous</div></a>
                 </div>
                 
                 <div class="col-md-4">
